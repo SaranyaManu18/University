@@ -4,9 +4,10 @@
   "description": "This is a website for the fictional university",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
     "start": "npm run lite",
-    "lite": "lite-server"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git"
@@ -14,10 +15,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "lite-server": "^2.6.1",
+    "node-sass": "^4.14.1"
   },
   "dependencies": {
     "bootstrap": "^4.5.2",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1"
   }

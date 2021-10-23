@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    
-    <!-- Additional CSS must be placed after Bootstrap CSS -->
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="css/styles.css" />
      <link rel="stylesheet" href="css/styles.css" />
 
-    <title>Sunray University</title>
+    <title>Undergraduate-Sunray University</title>
 </head>
+
 <body>
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -26,9 +29,70 @@
                     <h1>SUNRAY</h1>
                     <h2>For A Better Future</h2>
                 </div> 
+                <div class = "col-md-4 col-xl-2 mt-4"> 
+                    <a role="button" id="applyButton" href="apply.html" class=" btn btn-lg btn-danger ">Apply Now</a>
+                </div>
             </div>
         </div>
     </header>
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+      <div class="container">
+        <a class= "navbar brand" href = "index.html"><img src="img/sunLogo.png" height="30" width = "30"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sunrayNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="sunrayNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="index.html"></i>Home</a> </li>
+            <li class="nav-item">  <a class="nav-link" href="admissions.html">Admissions</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="academics.html"></i>Academics</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html"></i>News</a></li>
+            <li class="nav-item">  <a class="nav-link" href="aboutus.html"></i>About</a> </li>
+          </ul>
+          <span class= "navbar-text ml-auto">
+              <a role= "button" id="loginButton" >
+                <i class="fa fa-sign-in"></i>Login
+              </a> 
+          </span>
+        </div>
+      </div>
+    </nav>
+    <div id= "loginModal" class= "modal fade" role = "dialog">
+        <div class= "modal-dialog" role= "document">
+            <div class= "modal-content">
+                <div class= "modal-header">
+                     <h3 class="modal-title">Login</h3>
+                <button type= "button" class="close" data-dismiss= "modal">&times;</button>
+                </div>
+                <div class= "modal-body">
+                    <div class= "container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginEmail">Email address</label>
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label"> Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -97,7 +161,7 @@
                 requirements as determined by the college or department of the major. 
                 This same department reviews the application and determines the final admission decision.
                 Proceed to the link below submit an application.</p>
-                <button type="button" id="applyButton" class= "btn btn-sm btn-warning" >Apply Now</button>
+                <a href="apply.html" class="btn btn-warning">Apply Now</a>
         </div>
 
         <div class="row row-content">
@@ -123,7 +187,7 @@
 
                     <li>SAT or ACT Scores</li>
                     Scores can be sent directly from the testing agency, included on official transcripts or downloaded and sent to 
-                    <a href="admissions@sunray.edu" class="text-primary"type="email">admissions@sunray.edu</a>
+                    <a role="button" class="btn btn-link text-secondary" href="mailto:admissions@sunray.edu"><i class="fa fa-envelope text-secondary"></i> admissions@sunray.edu</a><br />
 
                     <li>Recommendation Letter</li>
                     Letters of recommendation (should be requested within online application).
@@ -138,43 +202,47 @@
         </div>
 </div>
 
-    <footer>
-        <div class="container">
-            <div class="row row-content"> 
-                <div class="col-1 col-sm-1 col-md-1">
-                    <a href = "index.html"><img src="img/sunLogo.png" height="70" width = "70"/></a>
-                </div>  
-                <div class="col-3 col-sm-2 text-center">
-                    <button type="button" id="applyButton" class= "btn btn-sm btn-warning" >Apply Now</button>
-                    <button type="button" id="infoButton" class= "btn btn-sm btn-warning" >Request Info</button>
-                </div>         
-                <div class="col-3 col-sm-2">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About</a></li>
-                        <li><a href="news.html">News</a></li>
-                    </ul>
-                </div>
-                <div class="col-3 col-sm-4 text-center">
-                    Address: 2400 N 46th St.<br/>
-                    Lucerne, TX 95231 <br/>
-                    Tel: 1-206-555-1234<br />
-                    Email: requestinfo@sunray.edu
-                </div>  
-                <div class="col col-sm-3 text-center">
-                	<h5>Social</h5>
-                    <a href="http://instagram.com/">Instagram</a>
-                    <a href="http://facebook.com/">Facebook</a>
-                    <a href="http://twitter.com/">Twitter</a>
-                    <a href="http://youtube.com/">YouTube</a>
-                </div>              
-           </div>
-        </div>
-    </footer>
+<footer class="site-footer">
+    <div class="container">
+        <div class="row row-content"> 
+            <div class="col-1 col-sm-1 col-md-1">
+                <a href = "index.html"><img src="img/sunLogo.png" height="70" width = "70"/></a>
+            </div>  
+            <div class="col-3 col-sm-2 text-center">
+                <a href= "apply.html" type="button" id="applyButton" class= "btn btn-md btn-block btn-warning" >Apply Now</a>
+                <a href= "moreinfo.html" type="button" id="infoButton" class= "btn btn-md btn-block btn-warning" >Request Info</a>
+            </div>         
+            <div class="col-3 col-sm-2">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+            </div>
+            <div class="col-3 col-sm-4 text-center">
+                <i class="fa fa-address-card text-secondary"></i>
+                Address: 2400 N 46th St.<br/>
+                Lucerne, TX 95231 <br/>
+                <a role="button" class="btn btn-link text-dark" href="tel:+12065551234"><i class="fa fa-phone text-secondary"></i> 1-206-555-1234</a><br/>
+                <a role="button" class="btn btn-link text-dark" href="mailto:requestinfo@sunray.edu"><i class="fa fa-envelope text-secondary"></i> requestinfo@sunray.edu</a><br />
+            </div>  
+            
+            <div class="col col-sm-3 text-center">
+                <h5>Social</h5>
+                <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+            </div>              
+       </div>
+    </div>
+</footer>
 
-         <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+
 </body>
 </html>
